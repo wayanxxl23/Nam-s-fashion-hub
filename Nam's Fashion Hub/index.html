@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nam's Fashion Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nam's Fashion Hub - Quality traditional fashion for men, women, shoes, and cosmetics.">
+
+<style>
+body, html {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; scroll-behavior:smooth;}
+body {background:#f4f4f4; color:#333; transition: background 0.3s, color 0.3s;}
+header {background:#000; color:#fff; position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; flex-wrap:wrap; z-index:1000;}
+header h1 {margin:0; font-size:26px;}
+nav {display:flex; flex-wrap:wrap;}
+nav a {color:#fff; margin-left:20px; font-weight:bold; text-decoration:none; margin-top:5px;}
+nav a:hover {text-decoration:underline;}
+#darkToggle {margin-left:15px; padding:5px 12px; border:none; background:#fff; color:#000; border-radius:5px; cursor:pointer;}
+
+/* HERO */
+.hero {position:relative; height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden; color:#fff;}
+.hero img {width:100%; height:80vh; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;}
+.hero img.active {opacity:1;}
+.hero h2 {font-size:48px; margin-bottom:10px; text-shadow:2px 2px 8px #000;}
+.hero p {font-size:22px; text-shadow:2px 2px 8px #000;}
+
+/* SECTIONS */
+.section {padding:60px 20px; max-width:1000px; margin:auto;}
+.section h2 {text-align:center; margin-bottom:40px; font-size:32px;}
+.products-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+.product-card {background:#f9f9f9; padding:20px; text-align:center; border-radius:8px; transition:transform 0.3s, box-shadow 0.3s;}
+.product-card:hover {transform:scale(1.05); box-shadow:0 5px 20px rgba(0,0,0,0.2);}
+.buy-button {display:inline-block; padding:10px 18px; background:#25D366; color:white; border-radius:6px; text-decoration:none; margin-top:10px;}
+.buy-button:hover {opacity:0.9;}
+
+/* GALLERY */
+.gallery-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; margin-top:20px;}
+.gallery-grid img {width:100%; border-radius:12px; transition:transform 0.3s;}
+.gallery-grid img:hover {transform:scale(1.05);}
+
+/* NEWSLETTER */
+.newsletter {text-align:center; margin-top:20px;}
+.newsletter input[type="email"] {padding:12px; width:70%; max-width:320px; border-radius:6px; border:1px solid #ccc; margin-right:5px;}
+.newsletter button {padding:12px 18px; border:none; border-radius:6px; background:#000; color:#fff; cursor:pointer;}
+.newsletter button:hover {background:#333;}
+
+/* CONTACT */
+.contact iframe {width:100%; height:300px; border:none; margin-top:10px; border-radius:12px;}
+
+/* FOOTER */
+footer {background:#000; color:#fff; text-align:center; padding:20px; margin-top:40px; font-size:14px;}
+
+/* FLOATING WHATSAPP */
+.whatsapp {position:fixed; bottom:20px; right:20px; background:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; box-shadow:2px 2px 5px rgba(0,0,0,0.3);}
+
+/* DARK MODE */
+.dark-mode {background:#111; color:#f4f4f4;}
+.dark-mode footer {background:#222;}
+
+/* RESPONSIVE */
+@media(max-width:768px){.hero{height:60vh;} .hero h2{font-size:36px;} .hero p{font-size:18px;}}
+@media(max-width:480px){.hero{height:50vh;} .hero h2{font-size:26px;} .hero p{font-size:16px;} .buy-button{font-size:12px; padding:8px 12px;}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Nam's Fashion Hub</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+<button id="darkToggle" onclick="toggleDarkMode()">Dark/Light</button>
+</header>
+
+<!-- HERO SLIDESHOW -->
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1350&q=80" class="active" alt="Traditional Fashion">
+<div>
+<h2>Style That Speaks</h2>
+<p>Quality fashion for every occasion</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>Nam’s Fashion Hub is a modern and traditional fashion brand dedicated to providing high-quality, trendy, and affordable clothing. We believe fashion is a lifestyle — and we’re here to help you express it with confidence.</p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+<h2>Our Products</h2>
+<div class="products-grid">
+<div class="product-card">
+<h3>Men's Wear</h3>
+<p>Stylish and comfortable outfits for men.</p>
+<a href="https://wa.me/254721657293" class="buy-button">Buy on WhatsApp</a>
+</div>
+<div class="product-card">
+<h3>Women's Wear</h3>
+<p>Elegant, trendy, traditional and modern fashion for women.</p>
+<a href="https://wa.me/254721657293" class="buy-button">Buy on WhatsApp</a>
+</div>
+<div class="product-card">
+<h3>Shoes</h3>
+<p>Premium shoes to complete your look.</p>
+<a href="https://wa.me/254721657293" class="buy-button">Buy on WhatsApp</a>
+</div>
+<div class="product-card">
+<h3>Women's Cosmetics</h3>
+<p>High-quality cosmetics to enhance beauty.</p>
+<a href="https://wa.me/254721657293" class="buy-button">Buy on WhatsApp</a>
+</div>
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section newsletter">
+<h2>Subscribe to Newsletter</h2>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="email" name="email" placeholder="Enter your email" required>
+<button type="submit">Subscribe</button>
+</form>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+<h2>Contact Us</h2>
+<p>Email: <a href="mailto:namshalu.kikuji@gmail.com">namshalu.kikuji@gmail.com</a></p>
+<p>Phone: <a href="tel:+254721657293">+254 721657293</a></p>
+<p>Location: Mihango, Kenya</p>
+
+<!-- GOOGLE MAPS EMBED -->
+<iframe class="map" 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789!2d36.791234!3d-1.234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1234567890ab%3A0xcdef1234567890ab!2sMihango%2C%20Kenya!5e0!3m2!1sen!2sus!4v1618888888888!5m2!1sen!2sus" 
+allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/254721657293" class="whatsapp" target="_blank">💬</a>
+
+<footer>
+<p>© 2026 Nam's Fashion Hub. All rights reserved.</p>
+</footer>
+
+<script>
+// DARK MODE TOGGLE
+function toggleDarkMode() {
+document.body.classList.toggle('dark-mode');
+}
+
+// HERO IMAGE STATIC (original single image)
+</script>
+
+</body>
+</html>
